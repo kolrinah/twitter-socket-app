@@ -8,3 +8,4 @@ This is a Node JS Application to use twitter API.
 2. Copy Twitter credentials in credentials.json file.
 3. To run it:
 > twitter-socket-app$ node app.js
+4. Open the browser with url: http://localhost:3001
