@@ -32,8 +32,9 @@
                 var counterA = $('li.optionA');
                 var counterB = $('li.optionB');
                 socket.on('tweet', function (data) {
+                    var image = '<img src="' + data.avatar + '" />';
                     tweetList
-                    .prepend('<li class="' + data.option +'">' + data.user + ': ' + data.text + '</li>');
+                    .prepend('<li class="' + data.option +'">' + image + ' ' + data.user + ': ' + data.text + '</li>');
                     counterA.text(data.optionA + '%');
                     counterB.text(data.optionB + '%');
                 });

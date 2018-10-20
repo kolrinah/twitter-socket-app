@@ -38,6 +38,7 @@ twit.stream('statuses/filter', { track: options }, function(stream){
         io.sockets.volatile.emit('tweet', {
             user: data.user.screen_name,
             text: data.text,
+            avatar: data.user.profile_image_url_https,
             option: option,
             optionA: (optionA/total) * 100, 
             optionB: (optionB/total) * 100
